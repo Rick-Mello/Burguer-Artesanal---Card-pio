@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --laranja: rgb(255, 138, 3);
+    --laranjaEscuro: rgba(255, 123, 0, 0.815);
+    --vermelho: rgba(252, 3, 3, 0.89);
+    --Fundo: rgb(255, 253, 253);
+    --borderRadius: 12px;
+    --backgroundbtn: rgba(65, 139, 30, 0.719);
+    --Negrito: 600;
+    --textoP: 14px;
+    --textoM: 16px;
+    --textoG: 20px;
+    --textoT: 28px;
+    --Sombra: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--Fundo);
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 120px;
+    margin-left: 5%;
+}
+
+header button {
+    width: 120px;
+    padding: 20px;
+    background-color: var(--laranja);
+    color: var(--vermelho);
+    font-weight: var(--Negrito);
+    border-radius: var(--borderRadius);
+    margin-right: 5%;
+    cursor: pointer;
+    box-shadow: var(--Sombra);
+    font-size: var(--textoM);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+header button:hover {
+    background-color: var(--laranjaEscuro);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    position: relative;
+    top: 50%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    animation: aparecer 1s forwards ;
+}
+
+#pTituloM {
+    font-size: var(--textoT);
+    font-weight: var(--Negrito);
+    padding-bottom: 15px;
+}
+
+#pTituloM span {
+    color: var(--laranja);
+    font-style: italic;
+}
+
+#pSubtituloM {
+    font-size: var(--textoM);
+    font-style: italic;
+}
+    
+#Coontatos {
+    margin: 15px auto 10px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+
+#Coontatos a {
+    width: 160px;
+    border-radius: var(--borderRadius);
+    background-color: var(--backgroundbtn);
+    font-size: var(--textoM);
+    box-shadow: var(--Sombra);
+    cursor: pointer;
+    transition: .2s;
+    color: black;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+#Coontatos img {
+    width: 50px;
+    aspect-ratio: 1/1;
+    background-color: var(--backgroundbtn);
+    cursor: pointer;
+    box-shadow: var(--Sombra);
+    border-radius: var(--borderRadius);
+    transition: .2s;
+}
+
+#telefone {
+    width: 220px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: var(--backgroundbtn);
+    box-shadow: var(--Sombra);
+    cursor: pointer;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    transition: .2s;
+}
+
+#telefone div {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--laranja);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#telefone div img {
+    width: 30px;
+    height: 30px;
+}
+
+#telefone p {
+    font-size: var(--textoM);
+    padding-left: 20px;
+}
+#Coontatos a:hover,#Coontatos img:hover ,#telefone :hover{
+    box-shadow: var(--Sombra);
+
+}
+#Cardapiop {
+    font-size: var(--textoT);
+    color: var(--laranja);
+    font-weight: var(--Negrito);
+    margin: 20px 0px;
+    padding: 20px;
+    border-top: 1px solid rgba(117, 97, 97, 0.267);
+}
+
+#Posi {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-height: none;
+    gap: 15px;
+}
+    
+.Itens {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    background-color: var(--backgroundbtn);
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    box-shadow: var(--Sombra); 
+    position: relative;
+}
+
+.Itens img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    box-shadow: var(--Sombra);
+}
+
+.POrdem {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--laranja);
+    color: var(--vermelho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--Negrito);
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.Itens div {
+    padding: 5px 10px 10px 10px;
+}
+
+.Itens div p:first-child {
+    font-size: var(--textoG);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--laranja);
+    width: 200px;
+    margin: auto;
+}
+
+.Itens div p:nth-child(2) {
+    font-size: var(--textoP);
+    padding: 10px 0px;
+}
+
+.Itens div p:last-child {
+    font-size: var(--textoG);
+    font-weight: var(--Negrito);
+    padding-top: 5px;
+}
+
+#AvaliacoesM {
+    font-size: var(--textoT);
+    color: var(--laranja);
+    font-weight: var(--Negrito);
+    margin: 20px 0px;
+    padding: 20px;
+    border-top: 1px solid rgba(117, 97, 97, 0.267);
+}
+
+.Avaliacao {
+    width: 90%;
+    max-width: 600px;
+    margin: 15px auto;
+    background-color: var(--backgroundbtn);
+    box-shadow: var(--Sombra);
+    border-radius: var(--borderRadius);
+    padding: 15px;
+    display: flex;
+    align-items: center; 
+}
+
+.Avaliacao > div:first-child {
+    padding-right: 20px;
+    border-right: 2px solid rgba(0, 0, 0, 0.25); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.Avaliacao div img {
+    width: 55px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.conteudoE {
+    text-align: start;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px; 
+}
+
+.estrelas {
+    display: flex;
+    gap: 3px;
+}
+
+.estrela {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 66% 56%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--laranja);
+    flex-shrink: 0;
+}
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 50px auto 0px auto;
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+@keyframes aparecer{
+    0% {
+        transform: translateY(20%);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
